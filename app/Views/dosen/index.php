@@ -7,7 +7,7 @@
 </head>
 <body class="bg-light">
     <div class="container mt-5">
-        <h2 class="mb-4">Daftar Dosen</h2>
+        <h2 class="mb-4">Data Dosen</h2>
         
         <div class="d-flex justify-content-between mb-3">
             <a href="dashboard" class="btn btn-secondary">&larr; Kembali ke Dashboard</a>

@@ -14,14 +14,15 @@
         <h3 class="text-secondary mb-4">Politeknik Negeri Jember</h3>
         
         <!-- Tombol Kembali ke Dashboard -->
-        <a href="dashboard" class="btn btn-secondary mb-3">&larr; Kembali </a>
+        <a href="dashboard" class="btn btn-secondary mb-3">&larr; Kembali ke Dashboard</a>
         
-        <table class="table table-bordered table-striped table-hover">
+        <table class="table table-bordered table-striped table-hover shadow-sm">
             <thead class="table-dark">
                 <tr>
                     <th>NIM</th>
                     <th>Nama</th>
                     <th>Prodi</th>
+                    <th>Dosen Pembimbing</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -29,9 +30,13 @@
                 <!-- Menggunakan variabel $mahasiswa dari Controller -->
                 <?php foreach( $mahasiswa as $mhs ) : ?>
                 <tr>
-                    <td><?= $mhs['nim']; ?></td>
-                    <td><?= $mhs['nama']; ?></td>
-                    <td><?= $mhs['prodi']; ?></td>
+                    <td><?= htmlspecialchars($mhs['nim']); ?></td>
+                    <td><?= htmlspecialchars($mhs['nama']); ?></td>
+                    <td><?= htmlspecialchars($mhs['prodi']); ?></td>
+                    <!-- Menampilkan hasil JOIN (nama_dosen) -->
+                    <td>
+                        <?= $mhs['nama_dosen'] ? htmlspecialchars($mhs['nama_dosen']) : '<span class="text-danger"><i>Belum ada</i></span>'; ?>
+                    </td>
                     <td>
                         <!-- URL detail yang rapi -->
                         <a href="mahasiswa/detail?nim=<?= $mhs['nim']; ?>" class="btn btn-primary btn-sm">Detail</a>

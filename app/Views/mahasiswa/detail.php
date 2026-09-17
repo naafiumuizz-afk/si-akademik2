@@ -20,7 +20,7 @@
                         <?php if (isset($mahasiswa) && $mahasiswa): ?>
                             <table class="table table-borderless mb-0">
                                 <tr>
-                                    <th width="30%">NIM</th>
+                                    <th width="35%">NIM</th>
                                     <td width="5%">:</td>
                                     <td><?= htmlspecialchars($mahasiswa['nim']) ?></td>
                                 </tr>
@@ -33,6 +33,13 @@
                                     <th>Prodi</th>
                                     <td>:</td>
                                     <td><?= htmlspecialchars($mahasiswa['prodi']) ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Dosen Pembimbing</th>
+                                    <td>:</td>
+                                    <td>
+                                        <?= $mahasiswa['nama_dosen'] ? htmlspecialchars($mahasiswa['nama_dosen']) : '<span class="text-muted"><i>Belum ada dosen</i></span>' ?>
+                                    </td>
                                 </tr>
                             </table>
                         <?php else: ?>
