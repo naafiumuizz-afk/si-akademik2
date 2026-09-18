@@ -34,13 +34,6 @@
                                     <td>:</td>
                                     <td><?= htmlspecialchars($mahasiswa['prodi']) ?></td>
                                 </tr>
-                                <tr>
-                                    <th>Dosen Pembimbing</th>
-                                    <td>:</td>
-                                    <td>
-                                        <?= $mahasiswa['nama_dosen'] ? htmlspecialchars($mahasiswa['nama_dosen']) : '<span class="text-muted"><i>Belum ada dosen</i></span>' ?>
-                                    </td>
-                                </tr>
                             </table>
                         <?php else: ?>
                             <div class="alert alert-danger mb-0">

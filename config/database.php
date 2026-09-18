@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'si-akademik';
+$dbname = 'si_akademik';
 $username = 'root';
 $password = '';
 $pdo = new PDO(

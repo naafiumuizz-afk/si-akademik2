@@ -13,8 +13,8 @@ class AuthController
         $username = $_POST['username'] ?? '';
         $password = $_POST['password'] ?? '';
 
-        // Contoh validasi login (hardcoded). Username: admin, Password: admin123
-        if ($username === 'admin' && $password === 'admin123') {
+        // Validasi login sederhana. Username: admin, Password: 12345
+        if ($username === 'admin' && $password === '12345') {
             $_SESSION['user_logged_in'] = true;
             $_SESSION['username'] = $username;
             
